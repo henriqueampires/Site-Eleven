@@ -120,8 +120,27 @@ footer > button, .footer-contact { justify-self: end; border: 0; background: tra
 .footer-socials { display: grid; gap: .45rem; }
 .footer-socials > span { color: var(--gold); font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .social-links { display: flex; flex-wrap: wrap; gap: .5rem; }
-.social-icon-link { display: grid; place-items: center; width: 37px; height: 37px; border: 1px solid rgba(216, 184, 111, .32); border-radius: 50%; color: var(--cream); transition: border-color .2s ease, background .2s ease, color .2s ease, transform .2s ease; }
-.social-icon-link svg { width: 17px; height: 17px; overflow: visible; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.social-icon-link {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(216, 184, 111, .42);
+  border-radius: 50%;
+  color: var(--cream);
+  transition: border-color .2s ease, background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.social-icon-link svg {
+  width: 23px;
+  height: 23px;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .social-icon-link svg path:first-child { fill: currentColor; stroke: none; }
 .social-icon-link svg .icon-cutout { fill: var(--navy-deep); stroke: none; }
 .social-icon-link svg .icon-fill { fill: currentColor; stroke: none; }
