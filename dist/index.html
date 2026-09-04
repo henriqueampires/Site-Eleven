@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Encontre imóveis selecionados em São Paulo, no interior e no litoral com a Eleven Imobiliária." />
+    <meta name="theme-color" content="#031f3f" />
+    <title>Eleven Imobiliária | Imóveis selecionados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./css/filters.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#catalogo">Ir para os imóveis</a>
+
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Eleven Imobiliária — início">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+        <span class="brand-copy">
+          <strong>ELEVEN</strong>
+          <small>IMOBILIÁRIA</small>
+        </span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#catalogo" aria-current="page">Imóveis</a>
+        <a href="./desenvolvimento-imobiliario/">Desenvolvimento Imobiliário</a>
+        <a href="./quem-somos/">Quem Somos</a>
+        <a href="./empresas-parceiras/">Empresas Parceiras</a>
+        <a href="./servicos/">Serviços</a>
+        <a href="./atualidades/">Atualidades</a>
+        <button class="nav-profile" type="button" data-open-profile>Meu perfil</button>
+        <button class="nav-contact" type="button" data-open-contact>Atendimento</button>
+      </nav>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
+        <span></span><span></span>
+      </button>
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Navegação móvel" hidden>
+        <a href="#catalogo" aria-current="page">Imóveis</a>
+        <a href="./desenvolvimento-imobiliario/">Desenvolvimento Imobiliário</a>
+        <a href="./quem-somos/">Quem Somos</a>
+        <a href="./empresas-parceiras/">Empresas Parceiras</a>
+        <a href="./servicos/">Serviços</a>
+        <a href="./atualidades/">Atualidades</a>
+        <button type="button" data-open-profile>Meu perfil</button>
+        <button type="button" data-open-contact>Atendimento</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-content">
+          <p class="eyebrow">CURADORIA IMOBILIÁRIA · SÃO PAULO</p>
+          <h1>O imóvel certo muda mais do que o seu endereço.</h1>
+          <p class="hero-copy">Uma seleção objetiva de casas, apartamentos, terrenos e imóveis comerciais para comprar com clareza e segurança.</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#catalogo">Explorar imóveis</a>
+            <button class="text-button" type="button" data-open-contact>Falar com um especialista <span aria-hidden="true">↗</span></button>
+          </div>
+          <dl class="hero-metrics">
+            <div><dt>Regiões</dt><dd>Capital, interior e litoral</dd></div>
+            <div><dt>Due Diligence</dt><dd>Análise documental organizada</dd></div>
+          </dl>
+        </div>
+        <div class="hero-image-wrap" aria-label="Imóvel em destaque">
+          <img src="./assets/property-1.png" alt="Casa contemporânea com piscina no interior de São Paulo" />
+          <div class="hero-property">
+            <span>DESTAQUE · INTERIOR</span>
+            <strong>Casa Horizonte</strong>
+            <small>Cabreúva · SP</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalogo" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow dark">ENCONTRE SEU PRÓXIMO IMÓVEL</p>
+            <h2 id="catalog-title">Seleção Eleven</h2>
+          </div>
+          <p>Use os filtros para chegar direto ao que faz sentido para você.</p>
+        </div>
+
+        <form class="search-panel" id="property-filters">
+          <div class="search-primary-row">
+            <fieldset class="deal-toggle">
+              <legend>Finalidade</legend>
+              <label><input type="radio" name="deal" value="buy" checked /><span>Comprar</span></label>
+              <label><input type="radio" name="deal" value="rent" /><span>Alugar</span></label>
+            </fieldset>
+
+            <label class="keyword-search">
+              <span class="field-label">Buscar por localização</span>
+              <span class="keyword-input-wrap">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" /></svg>
+                <input id="keyword-filter" name="keyword" type="search" placeholder="Bairro, cidade, condomínio ou código" autocomplete="off" />
+              </span>
+            </label>
+            <button class="search-submit" type="submit">Buscar imóveis</button>
+          </div>
+
+          <div class="search-main-row">
+            <label class="filter-field">
+              <span class="field-label">Local</span>
+              <select id="region-filter" name="region">
+                <option value="all">Todos os locais</option>
+                <option value="sao-paulo">São Paulo</option>
+                <option value="interior">Interior</option>
+                <option value="praia">Praia</option>
+              </select>
+            </label>
+            <label class="filter-field">
+              <span class="field-label">Tipo de imóvel</span>
+              <select id="type-filter" name="type">
+                <option value="all">Todos os tipos</option>
+                <option value="casa">Casa</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="terreno">Terreno</option>
+                <option value="comercial">Comercial</option>
+              </select>
+            </label>
+            <label class="filter-field">
+              <span class="field-label">Subcategoria</span>
+              <select id="subtype-filter" name="subtype" disabled>
+                <option value="all">Escolha primeiro o tipo</option>
+              </select>
+            </label>
+            <div class="rooms-filter" id="rooms-filter">
+              <button class="rooms-toggle" id="rooms-toggle" type="button" aria-expanded="false" aria-controls="rooms-popover">
+                <span><span class="field-label">Ambientes</span><strong id="rooms-summary">Dormitórios, suítes e vagas</strong></span>
+                <span class="rooms-chevron" aria-hidden="true">⌄</span>
+              </button>
+              <div class="rooms-popover" id="rooms-popover" hidden>
+                <fieldset class="quantity-filter">
+                  <legend>Dormitórios</legend>
+                  <div class="quantity-options">
+                    <label><input type="radio" name="bedrooms" value="all" checked /><span>Todos</span></label>
+                    <label><input type="radio" name="bedrooms" value="1" /><span>1+</span></label>
+                    <label><input type="radio" name="bedrooms" value="2" /><span>2+</span></label>
+                    <label><input type="radio" name="bedrooms" value="3" /><span>3+</span></label>
+                    <label><input type="radio" name="bedrooms" value="4" /><span>4+</span></label>
+                  </div>
+                </fieldset>
+                <fieldset class="quantity-filter">
+                  <legend>Suítes</legend>
+                  <div class="quantity-options">
+                    <label><input type="radio" name="suites" value="all" checked /><span>Todas</span></label>
+                    <label><input type="radio" name="suites" value="1" /><span>1+</span></label>
+                    <label><input type="radio" name="suites" value="2" /><span>2+</span></label>
+                    <label><input type="radio" name="suites" value="3" /><span>3+</span></label>
+                    <label><input type="radio" name="suites" value="4" /><span>4+</span></label>
+                  </div>
+                </fieldset>
+                <fieldset class="quantity-filter">
+                  <legend>Vagas</legend>
+                  <div class="quantity-options">
+                    <label><input type="radio" name="parking" value="all" checked /><span>Todas</span></label>
+                    <label><input type="radio" name="parking" value="1" /><span>1+</span></label>
+                    <label><input type="radio" name="parking" value="2" /><span>2+</span></label>
+                    <label><input type="radio" name="parking" value="3" /><span>3+</span></label>
+                    <label><input type="radio" name="parking" value="4" /><span>4+</span></label>
+                  </div>
+                </fieldset>
+                <button class="rooms-done" id="rooms-done" type="button">Confirmar</button>
+              </div>
+            </div>
+            <button class="advanced-toggle" id="advanced-toggle" type="button" aria-expanded="false" aria-controls="advanced-filters">
+              Mais filtros <span class="advanced-count" id="advanced-count" hidden>0</span><span aria-hidden="true">＋</span>
+            </button>
+          </div>
+
+          <div class="advanced-filters" id="advanced-filters" hidden>
+            <div class="range-filters">
+              <fieldset class="range-card">
+                <legend>Faixa de preço</legend>
+                <div class="range-values"><output id="price-min-output">R$ 0</output><span>até</span><output id="price-max-output">R$ 20 mi</output></div>
+                <label><span>Mínimo</span><input id="price-min" type="range" min="0" max="20000000" step="250000" value="0" /></label>
+                <label><span>Máximo</span><input id="price-max" type="range" min="0" max="20000000" step="250000" value="20000000" /></label>
+              </fieldset>
+              <fieldset class="range-card">
+                <legend>Área útil</legend>
+                <div class="range-values"><output id="area-min-output">0 m²</output><span>até</span><output id="area-max-output">5.000 m²</output></div>
+                <label><span>Mínima</span><input id="area-min" type="range" min="0" max="5000" step="10" value="0" /></label>
+                <label><span>Máxima</span><input id="area-max" type="range" min="0" max="5000" step="10" value="5000" /></label>
+              </fieldset>
+            </div>
+
+            <fieldset class="special-filters">
+              <legend>Filtros especiais</legend>
+              <label><input type="checkbox" data-special="virtualTour" /><span><strong>Tour virtual</strong><small>Visita em 360°</small></span></label>
+              <label><input type="checkbox" data-special="floorPlan" /><span><strong>Planta do imóvel</strong><small>Arquivo disponível</small></span></label>
+              <label><input type="checkbox" data-special="exchange" /><span><strong>Aceita permuta</strong><small>Negociação flexível</small></span></label>
+              <label><input type="checkbox" data-special="accessibility" /><span><strong>Acessibilidade</strong><small>Recursos acessíveis</small></span></label>
+            </fieldset>
+
+            <div class="advanced-actions">
+              <button class="secondary-button" id="clear-advanced" type="button">Limpar filtros avançados</button>
+              <button class="primary-button" id="apply-advanced" type="button">Aplicar filtros</button>
+            </div>
+          </div>
+
+          <section class="characteristic-filters" id="characteristic-filters" hidden aria-labelledby="characteristics-title">
+            <div class="characteristics-heading">
+              <div><p class="eyebrow dark">CARACTERÍSTICAS DO IMÓVEL</p><h3 id="characteristics-title">Refine sua busca</h3></div>
+              <p>Os atributos abaixo aparecem automaticamente conforme o tipo e a subcategoria selecionados.</p>
+            </div>
+            <div id="characteristics-content"></div>
+          </section>
+        </form>
+
+        <div class="active-filters" id="active-filters" aria-live="polite" hidden></div>
+
+        <div class="results-bar">
+          <p id="results-count" aria-live="polite">11 imóveis encontrados</p>
+          <span>Valores e disponibilidade sujeitos a confirmação</span>
+        </div>
+
+        <div class="property-grid" id="property-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span>11</span>
+          <h3>Nenhum imóvel combina com esses filtros.</h3>
+          <p>Altere um dos critérios ou limpe a busca para ver toda a seleção.</p>
+          <button class="secondary-button" type="button" id="empty-reset">Ver todos os imóveis</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+        <div><strong>ELEVEN</strong><small>IMOBILIÁRIA</small></div>
+      </div>
+      <p>Imóveis selecionados em São Paulo, interior e litoral.</p>
+      <div class="footer-socials">
+        <span>Siga a Eleven</span>
+        <div class="social-links" id="social-links" aria-label="Redes sociais da Eleven"></div>
+      </div>
+      <button type="button" data-open-contact>Entrar em contato <span aria-hidden="true">↗</span></button>
+      <small class="prototype-note">Site demonstrativo · CRECI e contatos comerciais serão inseridos na versão final.</small>
+    </footer>
+
+    <dialog class="property-dialog" id="property-dialog" aria-labelledby="detail-title">
+      <div class="dialog-shell">
+        <button class="dialog-close" type="button" data-close-dialog aria-label="Fechar detalhes">×</button>
+        <button class="detail-cover" id="detail-cover-open" type="button">
+          <span class="detail-image" id="detail-image" role="img"></span>
+          <span class="detail-cover-cta" id="detail-cover-cta">Abrir galeria <span aria-hidden="true">↗</span></span>
+        </button>
+        <div class="detail-content">
+          <div class="detail-topline"><span id="detail-label"></span><span id="detail-code"></span></div>
+          <h2 id="detail-title"></h2>
+          <p class="detail-location" id="detail-location"></p>
+          <div class="detail-price" id="detail-price"></div>
+          <div class="detail-specs" id="detail-specs"></div>
+          <p class="detail-description" id="detail-description"></p>
+          <section class="property-photo-gallery" aria-labelledby="property-gallery-title">
+            <div class="property-photo-gallery-heading">
+              <div>
+                <p class="eyebrow dark">GALERIA</p>
+                <h3 id="property-gallery-title">Fotos do imóvel</h3>
+              </div>
+              <div class="mini-gallery-controls">
+                <span id="mini-gallery-count"></span>
+                <button id="mini-gallery-prev" type="button" aria-label="Voltar nas miniaturas">←</button>
+                <button id="mini-gallery-next" type="button" aria-label="Avançar nas miniaturas">→</button>
+              </div>
+            </div>
+            <div class="mini-gallery-track" id="mini-gallery-track" aria-label="Miniaturas das fotos"></div>
+          </section>
+          <section class="property-media" aria-labelledby="property-media-title">
+            <div class="property-media-heading">
+              <p class="eyebrow dark">CONHEÇA O IMÓVEL</p>
+              <h3 id="property-media-title">Experiências e materiais</h3>
+            </div>
+            <div class="property-media-grid">
+              <button class="media-slot media-tour" id="detail-tour-slot" type="button" data-material-key="virtualTour">
+                <div class="media-slot-top">
+                  <span class="media-icon" aria-hidden="true">360°</span>
+                  <span class="media-status" id="detail-tour-status"></span>
+                </div>
+                <div>
+                  <h4>Tour virtual</h4>
+                  <p id="detail-tour-copy"></p>
+                </div>
+              </button>
+              <button class="media-slot media-floorplan" id="detail-floorplan-slot" type="button" data-material-key="floorPlan">
+                <div class="media-slot-top">
+                  <span class="media-icon floorplan-icon" aria-hidden="true">PLANTA</span>
+                  <span class="media-status" id="detail-floorplan-status"></span>
+                </div>
+                <div>
+                  <h4>Planta do imóvel</h4>
+                  <p id="detail-floorplan-copy"></p>
+                </div>
+              </button>
+              <button class="media-slot media-technical" id="detail-technical-sheet-slot" type="button" data-material-key="technicalSheet">
+                <div class="media-slot-top">
+                  <span class="media-icon file-icon" aria-hidden="true">DOC</span>
+                  <span class="media-status" id="detail-technical-sheet-status"></span>
+                </div>
+                <div>
+                  <h4>Ficha técnica</h4>
+                  <p id="detail-technical-sheet-copy"></p>
+                </div>
+              </button>
+              <button class="media-slot media-point-cloud" id="detail-point-cloud-slot" type="button" data-material-key="pointCloud">
+                <div class="media-slot-top">
+                  <span class="media-icon point-cloud-icon" aria-hidden="true">3D</span>
+                  <span class="media-status" id="detail-point-cloud-status"></span>
+                </div>
+                <div>
+                  <h4>Nuvem de pontos</h4>
+                  <p id="detail-point-cloud-copy"></p>
+                </div>
+              </button>
+            </div>
+          </section>
+          <section class="due-diligence" aria-labelledby="due-diligence-title">
+            <div class="due-diligence-heading">
+              <div><span class="verified-dot"></span><h3 id="due-diligence-title">Due Diligence</h3></div>
+              <small id="due-diligence-status"></small>
+            </div>
+            <ul id="due-diligence-list"></ul>
+            <p>A análise completa e os documentos correspondentes são apresentados durante o atendimento, respeitando a privacidade dos proprietários.</p>
+          </section>
+          <button class="primary-button full" type="button" id="detail-contact">Tenho interesse neste imóvel</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="fullscreen-gallery-dialog" id="fullscreen-gallery-dialog" aria-labelledby="fullscreen-gallery-title">
+      <div class="fullscreen-gallery-shell">
+        <header class="fullscreen-gallery-header">
+          <div>
+            <span id="fullscreen-gallery-location"></span>
+            <h2 id="fullscreen-gallery-title"></h2>
+          </div>
+          <button class="fullscreen-gallery-close" id="fullscreen-gallery-close" type="button" aria-label="Fechar galeria">×</button>
+        </header>
+        <div class="fullscreen-gallery-stage">
+          <img id="fullscreen-gallery-image" alt="" />
+          <button class="fullscreen-gallery-arrow fullscreen-gallery-prev" id="fullscreen-gallery-prev" type="button" aria-label="Foto anterior">‹</button>
+          <button class="fullscreen-gallery-arrow fullscreen-gallery-next" id="fullscreen-gallery-next" type="button" aria-label="Próxima foto">›</button>
+          <span class="fullscreen-gallery-count" id="fullscreen-gallery-count" aria-live="polite"></span>
+        </div>
+        <div class="fullscreen-gallery-thumbnails" id="fullscreen-gallery-thumbnails" aria-label="Todas as fotos do imóvel"></div>
+      </div>
+    </dialog>
+
+    <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title">
+      <form method="dialog" id="contact-form">
+        <button class="dialog-close" type="button" data-close-contact aria-label="Fechar atendimento">×</button>
+        <p class="eyebrow dark">ATENDIMENTO ELEVEN</p>
+        <h2 id="contact-title">Vamos conversar?</h2>
+        <p>Deixe seus dados e a preferência de imóvel. Esta demonstração não envia informações.</p>
+        <input type="hidden" id="contact-property" name="property" />
+        <label><span>Nome</span><input type="text" name="name" required autocomplete="name" placeholder="Seu nome" /></label>
+        <label><span>Telefone</span><input type="tel" name="phone" required autocomplete="tel" placeholder="(11) 99999-9999" /></label>
+        <label><span>O que você procura?</span><textarea name="message" rows="3" placeholder="Ex.: casa no interior com 3 dormitórios"></textarea></label>
+        <button class="primary-button full" type="submit">Solicitar atendimento</button>
+      </form>
+    </dialog>
+
+    <dialog class="profile-dialog" id="profile-dialog" aria-labelledby="profile-title">
+      <div class="profile-shell">
+        <div class="profile-intro">
+          <div class="profile-monogram" aria-hidden="true">E</div>
+          <p class="eyebrow">ÁREA DO CLIENTE</p>
+          <h2 id="profile-title">Seu próximo imóvel, mais perto.</h2>
+          <p>Acompanhe seus interesses e mantenha seus dados de contato organizados em um só lugar.</p>
+          <ul>
+            <li>Imóveis favoritos</li>
+            <li>Histórico de interesses</li>
+            <li>Preferências de busca</li>
+          </ul>
+        </div>
+        <div class="profile-panel">
+          <button class="dialog-close profile-close" type="button" data-close-profile aria-label="Fechar área do cliente">×</button>
+          <div class="profile-tabs" role="tablist" aria-label="Acesso à conta">
+            <button id="profile-login-tab" type="button" role="tab" aria-selected="true" aria-controls="profile-login" data-profile-tab="login">Entrar</button>
+            <button id="profile-register-tab" type="button" role="tab" aria-selected="false" aria-controls="profile-register" data-profile-tab="register">Criar cadastro</button>
+          </div>
+
+          <form class="profile-form" id="profile-login" role="tabpanel" aria-labelledby="profile-login-tab">
+            <h3>Boas-vindas de volta</h3>
+            <p>Acesse sua área para continuar sua busca.</p>
+            <label><span>E-mail</span><input type="email" name="email" required autocomplete="email" placeholder="seuemail@exemplo.com" /></label>
+            <label><span>Senha</span><input type="password" name="password" required autocomplete="current-password" minlength="6" placeholder="Sua senha" /></label>
+            <button class="primary-button full" type="submit">Entrar na conta</button>
+            <small>Área demonstrativa: nenhum dado ou senha é armazenado nesta versão.</small>
+          </form>
+
+          <form class="profile-form" id="profile-register" role="tabpanel" aria-labelledby="profile-register-tab" hidden>
+            <h3>Crie seu cadastro</h3>
+            <p>Conte o básico para personalizarmos seu atendimento.</p>
+            <div class="profile-form-grid">
+              <label><span>Nome completo</span><input type="text" name="name" required autocomplete="name" placeholder="Seu nome" /></label>
+              <label><span>Telefone</span><input type="tel" name="phone" required autocomplete="tel" placeholder="(11) 99999-9999" /></label>
+            </div>
+            <label><span>E-mail</span><input type="email" name="email" required autocomplete="email" placeholder="seuemail@exemplo.com" /></label>
+            <label><span>Senha</span><input type="password" name="password" required autocomplete="new-password" minlength="6" placeholder="Mínimo de 6 caracteres" /></label>
+            <label><span>Principal interesse</span>
+              <select name="interest" required>
+                <option value="">Selecione</option>
+                <option>Comprar um imóvel</option>
+                <option>Alugar um imóvel</option>
+                <option>Anunciar um imóvel</option>
+              </select>
+            </label>
+            <label class="profile-consent"><input type="checkbox" required /><span>Concordo em receber contato da Eleven sobre meu interesse.</span></label>
+            <button class="primary-button full" type="submit">Criar cadastro</button>
+            <small>Área demonstrativa: os dados ainda não são enviados nem armazenados.</small>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden>Pedido registrado na demonstração.</div>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
