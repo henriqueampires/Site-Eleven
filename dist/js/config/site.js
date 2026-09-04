@@ -1,8 +1,8 @@
 export const socialLinks = [
-  { label: "Instagram", url: "" },
-  { label: "Facebook", url: "" },
-  { label: "YouTube", url: "" },
-  { label: "WhatsApp", url: "" }
+  { label: "Instagram", url: "https://www.instagram.com/eleven_realty/" },
+  { label: "Facebook", url: "https://www.facebook.com/elevenrealestate/" },
+  { label: "YouTube", url: "https://www.youtube.com/@elevenrealestate" },
+  { label: "WhatsApp", url: "https://wa.me/5511996331757" }
 ];
 
 export const partnerLinks = [
