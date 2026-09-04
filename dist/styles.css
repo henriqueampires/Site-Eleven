@@ -120,20 +120,27 @@ footer > button, .footer-contact { justify-self: end; border: 0; background: tra
 .footer-socials { display: grid; gap: .45rem; }
 .footer-socials > span { color: var(--gold); font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .social-links { display: flex; flex-wrap: wrap; gap: .5rem; }
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
 .social-icon-link {
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
-  border: 1px solid rgba(216, 184, 111, .42);
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(216, 184, 111, 0.5);
   border-radius: 50%;
   color: var(--cream);
-  transition: border-color .2s ease, background .2s ease, color .2s ease, transform .2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .social-icon-link svg {
-  width: 23px;
-  height: 23px;
+  width: 30px;
+  height: 30px;
   overflow: visible;
   fill: none;
   stroke: currentColor;
@@ -141,11 +148,33 @@ footer > button, .footer-contact { justify-self: end; border: 0; background: tra
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.social-icon-link svg path:first-child { fill: currentColor; stroke: none; }
-.social-icon-link svg .icon-cutout { fill: var(--navy-deep); stroke: none; }
-.social-icon-link svg .icon-fill { fill: currentColor; stroke: none; }
-a.social-icon-link:hover { border-color: var(--gold); background: var(--gold); color: var(--navy-deep); transform: translateY(-2px); }
-.social-placeholder { opacity: .45; cursor: help; }
+
+.social-icon-link svg path:first-child {
+  fill: currentColor;
+  stroke: none;
+}
+
+.social-icon-link svg .icon-cutout {
+  fill: var(--navy-deep);
+  stroke: none;
+}
+
+.social-icon-link svg .icon-fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+a.social-icon-link:hover {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--navy-deep);
+  transform: translateY(-3px);
+}
+
+.social-placeholder {
+  opacity: 0.45;
+  cursor: help;
+}
 .prototype-note { grid-column: 1 / -1; padding-top: 1.2rem; border-top: 1px solid rgba(216, 184, 111, .12); color: rgba(245, 241, 232, .36); font-size: .67rem; }
 
 dialog { width: min(100% - 2rem, 1100px); max-height: min(92vh, 950px); padding: 0; border: 0; background: var(--paper); color: var(--ink); box-shadow: 0 35px 100px rgba(0, 0, 0, .42); }
